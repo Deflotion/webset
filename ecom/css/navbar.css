@@ -1,0 +1,85 @@
+:root {
+  --navy: #5e747f;
+  --primary: #007bff;
+  --info: #17a2b8;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --dark: #343a40;
+  --secondary: #6c757d;
+}
+
+/* Global CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navy);
+  color: #fff;
+  padding: 1.4em 3em;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.round {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-brand h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.round img {
+  width: 25px;
+}
+
+.img-cart {
+  width: 20px !important;
+}
+
+.navbar-item {
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.nav-item:last-child {
+  margin-right: 0px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: #fff;
+  font-weight: 600;
+}

@@ -1,0 +1,121 @@
+.row {
+  display: flex;
+  justify-content: center;  
+}
+
+/* .table-responsive {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em;
+  background: #fff;
+  margin-top: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+} */
+
+table {
+  width: 100%;
+  margin-top: 1m;
+  padding: 2em;
+  border-collapse: collapse;
+  caption-side: bottom;
+  margin-bottom: 2em;
+}
+
+table,
+th,
+td {
+  border: solid 2px #f1f1f1;
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+}
+
+.container {
+  margin: 2em 3em;
+}
+
+.section-title {
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5em;
+  background: #fff;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.badge-warning {
+  background-color: var(--warning);
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.btn-info {
+  width: 100%;
+  background-color: var(--info);
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn-info:hover {
+  border: solid 2px var(--primary);
+  background: transparent;
+  color: var(--primary);
+  transition: 0.1s;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: green;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  border: solid 2px var(--primary);
+  background: transparent;
+  color: var(--primary);
+  transition: 0.1s;
+}
+
+.submit {
+  width: 100%;
+  background-color: var(--info);
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  border: solid 2px var(--primary);
+  background: transparent;
+  color: var(--primary);
+  transition: 0.1s;
+}

@@ -1,0 +1,94 @@
+.card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #FFF;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    table-layout: auto;
+}
+
+.btn{
+    text-decoration: none;
+    color: #fff;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 40px;
+    margin-left: 2em;
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+.btn-primary{
+    background-color: var(--primary);
+}
+
+.btn-primary:hover{
+    border: solid 2px var(--primary);
+    background: transparent;
+    color: var(--primary);
+    transition: .1s;
+}
+
+.table-responsive{
+    padding: 2em;
+}
+
+table{
+    width: 100%;
+    margin-top: 1m;
+    padding: 2em;
+    border-collapse:collapse;
+    caption-side:bottom;
+}
+
+table, th, td {
+    border: solid 2px #f1f1f1;
+    padding: 10px;
+}
+
+td{
+    text-align: center;
+}
+
+.btn-edit{
+    width: 100%;
+    background-color: var(--warning);
+    color: black;
+    text-decoration: none;
+    padding: 5px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete{
+    width: 100%;
+    background-color: var(--danger);
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.badge-warning{
+    background-color: var(--warning);
+    padding: 5px 12px;
+    border-radius: 50px;
+}
+
+.badge-success{
+    background-color: var(--success);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 50px;
+}
