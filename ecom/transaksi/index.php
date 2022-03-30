@@ -35,7 +35,7 @@
                 <a href="../admin/dashboard.php">Dashboard</a>
             </li>
             <li>
-                <a href="../product/index.php">Products</a>
+                <a href="../product/">Products</a>
             </li>
             <li class="active">
                 <a href="index.php">Transaksi</a>

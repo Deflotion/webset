@@ -13,36 +13,53 @@
 </head>
 
 <body>
-    <nav class="navbar">
+<nav class="navbar">
+        <!-- Logo Icon -->
         <div class="navbar-brand">
-            <h4>Shop Geming</h4>
+            <div class="round">
+                <a href="../" class="nav-link active"><img src="../image/logo.png" alt=""></a>
+            </div>
+            <a href="../" class="nav-link-brand"><h4>Geming Shop</h4></a>
         </div>
+
+        <!-- Navbar -->
         <ul class="navbar-item">
             <li class="nav-item">
-                <a href="../index.php" class="nav-link">Home</a>
+                <a href="../" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-                <a href="index.php" class="nav-link active">Orders</a>
+                <a href="../order/" class="nav-link active">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a href="../cart/" class="nav-link">Cart</a>
             </li>
             <?php
+            // Memulai Session
             session_start();
-
+            // Melakukan Pengecekan Apakah di dalam session terdapat array username
+            // Jika Ada Maka Jalankan Program Ini
             if (isset($_SESSION['status'])) {
+                // Melakukan apakah di dalam array username itu adalah admin atau bukan
+                // Jika Admin maka jalankan program ini
                 if ($_SESSION['status'] == 'admin') {
                     // Halaman Admin
                     echo '
                         <li class="nav-item">
-                            <a href="../admin/dashboard.php" class="nav-link">Dashboard</a>
+                            <a href="admin/dashboard.php" class="nav-link">Dashboard</a>
                         </li>
                     ';
-                } else {
+                }
+                // Jika Bukan Admin Maka Jalankan Program Ini
+                else {
                     echo '
                         <li class="nav-item">
                             <a href="../logout.php" class="nav-link">Logout</a>
                         </li>
                     ';
                 }
-            } else {
+            }
+            // Jika Tidak Ada Maka Jalankan Program Ini
+            else {
                 echo '
                         <li class="nav-item">
                             <a href="../login/" class="nav-link">Sign In</a>
@@ -50,11 +67,8 @@
                     ';
             }
             ?>
-
         </ul>
-        <a href="index.php" class="round">
-            <img src="../image/icon-cart.png" class="img-cart" alt="">
-        </a>
+        
     </nav>
     <div class="container">
         <h2 class="section-title">List Transaksi Anda</h2>

@@ -102,15 +102,16 @@ td {
 }
 
 .submit {
-  width: 100%;
   background-color: var(--info);
   text-decoration: none;
   color: #fff;
-  padding: 5px 20px;
-  margin: 8px 0;
+  padding: 0.3em 1.3em;
+  margin: auto;
   border: none;
-  border-radius: 50px;
+  border-radius: 12px;
   cursor: pointer;
+  display: flex;
+  font-size: 17.5px;
 }
 
 .submit:hover {
@@ -118,4 +119,17 @@ td {
   background: transparent;
   color: var(--primary);
   transition: 0.1s;
+}
+
+.btn-danger{
+  background-color: rgb(167, 38, 38);
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 0.5em 1.5em;
+  border-radius: 12px;
+}
+
+.btn-danger:hover{
+  background-color: red;
+  transition: 0.5s;
 }

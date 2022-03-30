@@ -8,55 +8,68 @@
     <title>Shop</title>
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/order.css">
 </head>
 
 <body>
     <nav class="navbar">
+        <!-- Logo Icon -->
         <div class="navbar-brand">
-            <a href="../" class="nav-link active">
-                <h4>Shop Geming</h4>
+            <div class="round">
+                <a href="../" class="nav-link active"><img src="../image/logo.png" alt=""></a>
+            </div>
+            <a href="../" class="nav-link-brand">
+                <h4>Geming Shop</h4>
             </a>
         </div>
-        <ul class=" navbar-item">
+
+        <!-- Navbar -->
+        <ul class="navbar-item">
             <li class="nav-item">
-                <a href="../index.php" class="nav-link active">Home</a>
+                <a href="../" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-                <a href="../order" class="nav-link">Orders</a>
+                <a href="../order/" class="nav-link">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a href="../cart/" class="nav-link active">Cart</a>
             </li>
             <?php
+            // Memulai Session
             session_start();
-
-            if (isset($_SESSION['username'])) {
-                if ($_SESSION['username'] == 'admin') {
+            // Melakukan Pengecekan Apakah di dalam session terdapat array username
+            // Jika Ada Maka Jalankan Program Ini
+            if (isset($_SESSION['status'])) {
+                // Melakukan apakah di dalam array username itu adalah admin atau bukan
+                // Jika Admin maka jalankan program ini
+                if ($_SESSION['status'] == 'admin') {
                     // Halaman Admin
                     echo '
                         <li class="nav-item">
-                            <a href="../admin/dashboard.php" class="nav-link">Dashboard</a>
+                            <a href="admin/dashboard.php" class="nav-link">Dashboard</a>
                         </li>
                     ';
-                } else {
+                }
+                // Jika Bukan Admin Maka Jalankan Program Ini
+                else {
                     echo '
                         <li class="nav-item">
                             <a href="../logout.php" class="nav-link">Logout</a>
                         </li>
                     ';
                 }
-            } else {
+            }
+            // Jika Tidak Ada Maka Jalankan Program Ini
+            else {
                 echo '
                         <li class="nav-item">
-                            <a href="../login/" class="nav-link">Sign In</a>
+                            <a href="login/" class="nav-link">Sign In</a>
                         </li>
                     ';
             }
             ?>
-
         </ul>
-        <a href="index.php" class="round">
-            <img src="../image/icon-cart.png" class="img-cart" alt="">
-        </a>
     </nav>
     <?php
 
@@ -120,10 +133,11 @@
         $arrQuantity = $_POST['quantity'];
         $cart = unserialize(serialize($_SESSION['cart']));
         for ($i = 0; $i < count($cart); $i++) {
-            $cart[$i]->quantity = $arrQuantity[$i];
-        }
+        $cart[$i]->quantity = $arrQuantity[$i];
         $_SESSION['cart'] = $cart;
+        }
     }
+
     ?>
     <div class="container">
         <h2 class="section-title">keranjang Belanja Anda</h2>
@@ -158,24 +172,25 @@
                     <td style="display: flex;align-items: center;justify-content: center;">
                         <a href="index.php?index=<?php echo $index; ?>" class="btn-danger"
                             onclick="return confirm('Apa Kamu Yakin Ingin Menghapus Ini?')">
-                            <img src="../image/icon-delete.svg" alt=""></a>
+                            Delete</a>
                     </td>
                 </tr>
                 <?php $index++;
                 }
                 ?>
                 <tr>
-                    <td colspan="4" style="text-align:right; font-weight:500">
+                    <td colspan="3"> Total </td>
+                    <td colspan="2">Rp.<?php echo number_format($s); ?></td>
+                    <td style="text-align:right; font-weight:500">
                         <!-- <input id="saveimg" type="image" name="update" alt="Save Button"> -->
-                        <button class="submit">Save</button>
+                        <button name="update" class="submit">Hitung</button>
                         <!-- <input type=" hidden" name="update"> -->
                     </td>
-                    <td colspan="2"> Rp.<?php echo number_format($s); ?> </td>
                 </tr>
             </table>
         </form>
         <br>
-        <a href="../index.php" class="btn btn-info">Continue Shopping</a>
+        <a href="../index.php" class="btn btn-info">Lanjut Belanja</a>
         <?php
 
         if (isset($_SESSION['id_user'])) {

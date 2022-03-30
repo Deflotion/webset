@@ -35,18 +35,6 @@ body {
   align-items: center;
 }
 
-.round {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: white;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(20px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .navbar-brand h4 {
   font-size: 24px;
   font-weight: 600;
@@ -54,7 +42,10 @@ body {
 }
 
 .round img {
-  width: 25px;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .img-cart {
@@ -82,4 +73,10 @@ body {
 .nav-link.active {
   color: #fff;
   font-weight: 600;
+}
+
+.nav-link-brand {
+  color: #81F499;
+  font-weight: 600;
+  text-decoration: none;
 }

@@ -60,14 +60,14 @@ td{
 }
 
 .badge-warning{
-    background-color: var(--warning);
+    background-color: rgb(214, 214, 28);
     padding: 5px 12px;
     border-radius: 50px;
 }
 
 .btn-info{
     width: 100%;
-    background-color: var(--info);
+    background-color: rgb(41, 41, 214);
     text-decoration: none;
     color: #FFF;
     padding: 5px 20px;

@@ -81,13 +81,13 @@ td{
 }
 
 .badge-warning{
-    background-color: var(--warning);
+    background-color: rgb(214, 214, 28);
     padding: 5px 12px;
     border-radius: 50px;
 }
 
 .badge-success{
-    background-color: var(--success);
+    background-color: rgb(20, 136, 20);
     color: #fff;
     padding: 5px 12px;
     border-radius: 50px;

@@ -12,13 +12,13 @@
 
 <body>
     <div class="sidebar">
-        <h4 class="sidebar-brand">SHOP</h4>
+        <h4 class="sidebar-brand">Admin</h4>
         <ul>
             <li class="active">
                 <a href="dashboard.php">Dashboard</a>
             </li>
             <li>
-                <a href="../product/index.php">Products</a>
+                <a href="../product">Products</a>
             </li>
             <li>
                 <a href="../transaksi">Transaksi</a>
@@ -131,7 +131,9 @@
         $query = "UPDATE transaksi SET status='$status' WHERE idTransaksi = '$id'";
         $run = mysqli_query($koneksi, $query);
         if ($run) {
-            header("location:dashboard.php");
+            echo"
+                <script>document.location.href = 'dashboard.php'</script>
+            ";
         }
     }
     ?>
